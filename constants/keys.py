@@ -3,6 +3,7 @@ from telegram import KeyboardButton
 # Main keys
 translate_key: KeyboardButton = KeyboardButton('Переводчик')
 return_key: KeyboardButton = KeyboardButton('Вернуться')
+reset_key: KeyboardButton = KeyboardButton('Задать новый вопрос')
 
 # Language keys
 english: KeyboardButton = KeyboardButton('Английский')
