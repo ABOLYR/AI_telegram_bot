@@ -17,6 +17,7 @@ conversation_handler = ConversationHandler(
         states={
             states.GET_USER_INPUT: [
                 CommandHandler('reset', main_dispatches.start_new_context),
+                MessageHandler(filters.Regex(keys.reset_key.text), main_dispatches.start_new_context),
                 MessageHandler(filters.Regex(keys.translate_key.text), translator_dispatches.set_translate_language),
                 MessageHandler(filters.TEXT, main_dispatches.send_user_answer),
             ],
